@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
     <title>nicket's blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
 </head>
 <body>
-    <h2>welcome to my blog</h2>
+    
+    <div class="header">
+        <h1>nicket 的博客</h1>
+        <h2>welcome to my blog</h2>
+        <img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='test2.jpg') }}">
+    </div> 
+    <div class="container clearfix">
+     <div class="left">
+      <h1>你好啊</h1>
+     </div>
+     <div class="right"></div> 
+        <div class="rili">
+            <h1>这里是日历模块</h1>
+            <div class="month">      
+                <ul>
+                  <li class="prev">❮</li>
+                  <li class="next">❯</li>
+                  <li style="text-align:center">
+                    {{mouth}}<br>
+                    <span style="font-size:18px">{{year}}</span>
+                  </li>
+                </ul>
+              </div>
+               
+              <ul class="weekdays">
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+              </ul>
+               
+              <ul class="days">  
+                {% for i in range(1,31) %}
+                  {% if day==i %}
+                    <li><span class="active">{{day}}</span></li>
+                  {% else %}
+                    <li>{{i}}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+        </div>
+        <div class="movie-list">
+            <h1>todo  list</h1>
+            <ul >
+            {% for todo in todo %}
+              <li>{{todo.date}}-{{todo.busness}}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <p class="word">
+            hi,我是nicket<br/>
+            欢迎你访问我的博客<br/>
+            目前是一名大二学生<br/>
+            会在这里分享一些学过的知识与一些有趣的生活片段<br/>
+            同时欢迎你访问我的githup : <a href="https://github.com/nicket1">nicket</a>
+        </p>
+     </div>
+   </div>
 </body>
 </html>
