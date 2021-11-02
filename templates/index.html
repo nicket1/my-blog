@@ -5,66 +5,102 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
 </head>
 <body>
-    
-    <div class="header">
-        <h1>nicket 的博客</h1>
-        <h2>welcome to my blog</h2>
-        <img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='test2.jpg') }}">
+    <div id="header">
+      <div class="myicon">
+        <img alt="Walking Totoro" class="toro" src="{{ url_for('static', filename='test2.jpg') }}">
+      </div>
+        <div id="htitle">
+          <div class="title1">
+            <h1 style="font-size: 80px;color: rgb(252, 251, 248);">nicket的博客</h1>
+            <h2 style="font-size: 60px;color: rgba(255, 255, 255, 0.548);">&nbsp;&nbsp; ---- welcome to my blog</h2>
+          </div>
+          
+        </div>   
     </div> 
-    <div class="container clearfix">
-     <div class="left">
-      <h1>你好啊</h1>
-     </div>
-     <div class="right"></div> 
-        <div class="rili">
-            <h1>这里是日历模块</h1>
-            <div class="month">      
-                <ul>
-                  <li class="prev">❮</li>
-                  <li class="next">❯</li>
-                  <li style="text-align:center">
-                    {{mouth}}<br>
-                    <span style="font-size:18px">{{year}}</span>
-                  </li>
-                </ul>
+    <div id="bodyer">
+      <div class="right">
+        <div class="calendar">
+          <div class="date">
+              <h3>January</h3>
+              <div class="days">
+                  <div class="day">S</div>
+                  <div class="day">M</div>
+                  <div class="day">T</div>
+                  <div class="day">W</div>
+                  <div class="day">T</div>
+                  <div class="day">F</div>
+                  <div class="day">S</div>
+                  <div class="number"></div>
+                  <div class="number"></div>
+                  <div class="number">1</div>
+                  <div class="number">2</div>
+                  <div class="number  active">3</div>
+                  <div class="number">4</div>
+                  <div class="number">5</div>
+                  <div class="number">6</div>
+                  <div class="number">7</div>
+                  <div class="number">8</div>
+                  <div class="number">9</div>
+                  <div class="number">10</div>
+                  <div class="number">11</div>
+                  <div class="number">12</div>
+                  <div class="number">13</div>
+                  <div class="number">14</div>
+                  <div class="number">15</div>
+                  <div class="number">16</div>
+                  <div class="number">17</div>
+                  <div class="number">18</div>
+                  <div class="number">19</div>
+                  <div class="number">20</div>
+                  <div class="number">21</div>
+                  <div class="number">22</div>
+                  <div class="number">23</div>
+                  <div class="number">24</div>
+                  <div class="number">25</div>
+                  <div class="number">26</div>
+                  <div class="number">27</div>
+                  <div class="number">28</div>
+                  <div class="number">29</div>
+                  <div class="number">30</div>
+                  <div class="number">31</div>
               </div>
-               
-              <ul class="weekdays">
-                <li>Mo</li>
-                <li>Tu</li>
-                <li>We</li>
-                <li>Th</li>
-                <li>Fr</li>
-                <li>Sa</li>
-                <li>Su</li>
-              </ul>
-               
-              <ul class="days">  
-                {% for i in range(1,31) %}
-                  {% if day==i %}
-                    <li><span class="active">{{day}}</span></li>
-                  {% else %}
-                    <li>{{i}}</li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
+          </div>
         </div>
-        <div class="movie-list">
-            <h1>todo  list</h1>
-            <ul >
-            {% for todo in todo %}
-              <li>{{todo.date}}-{{todo.busness}}</li>
-            {% endfor %}
-            </ul>
-        </div>
-        <p class="word">
-            hi,我是nicket<br/>
-            欢迎你访问我的博客<br/>
-            目前是一名大二学生<br/>
-            会在这里分享一些学过的知识与一些有趣的生活片段<br/>
-            同时欢迎你访问我的githup : <a href="https://github.com/nicket1">nicket</a>
-        </p>
-     </div>
-   </div>
+          <div class="todolist">
+              <h1>&nbsp;&nbsp;&nbsp; Todo  list</h1>
+              <ul >
+              {% for todo in todo %}
+                <li onclick="move_forward()">{{todo.date}}: &nbsp;&nbsp;&nbsp; {{todo.busness}}</li>
+              {% endfor %}
+              </ul>
+          </div>
+          <div class="word">
+            <div class="new">
+              &nbsp;&nbsp;hi,我是nicket<br/>
+              &nbsp;&nbsp;欢迎你访问我的博客<br/>
+              &nbsp;&nbsp;目前是一名大二学生<br/>
+              &nbsp;&nbsp;会在这里分享一些学过的知识与一 &nbsp;&nbsp;些有趣的生活片段<br/>
+              &nbsp;&nbsp;同时欢迎你访问我的githup : <a href="https://github.com/nicket1">nicket</a>
+            </div>
+            
+            </div>
+      </div>
+      <div class="left">
+       <div class="commit">
+            <h1 >这里放标题</h1>
+            <div class="abc"> {{ content}} </div>
+       </div>
+       <div class="last">
+            <span class="end">友情链接</span>
+            <a class="end" href="https://www.ahau.edu.cn/">&nbsp; ahau</a>
+            <a class="end" href="https://github.com/nicket1">&nbsp;github 个人主页</a>
+            <a class="end" href="http://www.shqnzx.org.cn/">&nbsp;上海氢能利用工程技术研究中心</a>
+            <br>
+            <br>
+            <span class="end">&copy;nicket</span>> 
+            <span class="end">&nbsp;email: zzp0719@gmail</span>
+       </div>
+       </div>       
+    </div>
 </body>
 </html>

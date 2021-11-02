@@ -1,139 +1,150 @@
-body {
-    margin: 2cm 4cm 3cm 4cm;
-  }
-  .container {
-    height: 800px;
-    background-color: #eebefa;
-  }
-/* ��Ӱ�б� */
-.movie-list {
-    margin-top:100px;
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px 0 rgba(107, 96, 96, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+body{
+    background-image: url(base.png);
+    margin-left: 70px;
+    margin-right: 70px;
 }
+#header{
+    
+    height: 300px;
+    position :relative;
 
-.movie-list li {
-    padding: 12px 24px;
-    border-bottom: 1px solid #ddd;
 }
-
-.movie-list li:last-child {
-    border-bottom:none;
+#htitle{
+    border-radius:10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.726);
+    margin-right: 310px;
+    height: 300px;
+    
 }
-
-.movie-list li:hover {
-    background-color: #f8f9fa;
-}
-
-/* ��èͼƬ */
-.word{
-    border-style: double;
-}
-.totoro {
-    display: block;
-    margin: 0 auto;
-    height: 100px;
-}
-* {box-sizing:border-box;}
-ul {list-style-type: none;}
-body {font-family: Verdana,sans-serif;}
- 
-.month {
-    padding: 70px 25px;
-    width: 100%;
-    background: #1abc9c;
-}
- 
-.month ul {
-    margin: 0;
-    padding: 0;
-}
- 
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
- 
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
- 
-.month .next {
+.myicon{
+    
     float: right;
-    padding-top: 10px;
 }
- 
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color: #ddd;
-}
- 
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #666;
-    text-align: center;
-}
- 
-.days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-}
- 
-.days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:12px;
-    color: #777;
-}
- 
-.days li .active {
-    padding: 5px;
-    background: #1abc9c;
-    color: white !important
-}
-.rili{
-    margin-top:100px;
-    height: 500px;
-}
-.header{
-  height: 500px;
-  background-color: #f1f1f1;
-  padding: 200px;
-  text-align: center;
-}
-.left {
-  float: left;
-  width: 70%;
-  background-color: #8583f7;
-  font-size: 70px;
-  line-height: 400px;
-  text-align: center;
-  }
-.right{
-  float: right;
-  height: 400px;
-  width: 30%;
-  background-color: #c0eb75;
-  font-size: 70px;
-  line-height: 400px;
-}
-.clearfix:after {
-    content: '';
-    display: block;
-    height: 100%;
-    clear: both;
-    visibility: hidden;
-  }
+.title1{
    
- 
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top: -170px;
+    margin-left: -500px;
+}
+.toro{
+    border-radius:10px;
+    width: 300px;
+    height: 300px;
+}
+.left{
+    
+    margin-right: 320px;
+    height: auto;
+    margin-top: 30px;
+}
+.commit{
+    border-radius:10px;
+    border: 30px solid rgba(101, 150, 240, 0); /*�߿�*/
+    background-color:  rgba(101, 150, 240, 0.541);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    height: auto;
+}
+.last{
+    border-radius:10px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    border: 30px solid rgba(101, 150, 240, 0); /*�߿�*/
+    background-color:  rgba(24, 236, 41, 0.541);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    height: auto;
+}
+.right{
+    float: right;
+    width: 300px !important;
+}
+.end{
+    
+   color: rgba(215, 19, 241, 0.568);
+}
+.calendar{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.753);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border:solid; /*�߿�*/
+    border-radius:10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+}
+.calendar .date{
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box; /*���Ӵ�С����*/
+}
+.calendar .date h3{
+    margin: 0 0 30px; 
+    padding: 0;
+    font-size: 25px; /*�����С*/
+    font-weight: 300; /*����ά��*/
+    text-align: center; /*�������*/
+    user-select: none; /*����ѡ��*/
+    text-transform: capitalize; /*����ĸ��д*/
+}
+.calendar .date .days{
+    display: flex;
+    flex-wrap: wrap; /*�ɻ���*/
+}
+.calendar .date .days .number.active{
+    background-color: #362b48;
+    color: #fff;
+    cursor: pointer; /*�����ʽ*/
+    border-radius: 50%; /*�߿�Բ��*/
+}
+.calendar .date .days .day,
+.calendar .date .days .number{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.calendar .date .days .day:first-child,
+.calendar .date .days .number:nth-child(7n+1){ /*7��Ϊһ�飬ÿ���һ��*/
+    color: #f44336;
+    font-weight: 600;
+}
+.todolist{
+    margin-top: 20px;
+    width: 300px;
+    border-radius:10px;
+    border: solid rgb(0, 0, 0); /*�߿�*/
+    background-color:  rgba(255, 255, 255, 0.541);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    height: auto;
+}
+.todolist li{
+    color: rgba(255, 2, 2, 0.904);
+    list-style-type: none;
+    margin-top: 10px;
+    width: 200px;
+    border-radius:10px;
+    border: solid rgb(3, 0, 0); /*�߿�*/
+    background-color:  rgba(223, 220, 22, 0.253);
+    /* box-shadow: 0 10px 15px rgba(0,0,0,0.5); */
+    height: auto;
+}
+.word{
+    margin-top: 20px;
+
+    border-radius:10px;
+    border: solid rgb(0, 0, 0); /*�߿�*/
+    background-color:  rgba(219, 23, 23, 0);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+}
+.new{
+    color: white;
+    border-radius:10px;
+    border: 10px solid rgba(4, 243, 63, 0.699); /*�߿�*/
+    background-color:  rgba(0, 0, 0, 0.658);
+}
