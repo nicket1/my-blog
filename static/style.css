@@ -14,21 +14,15 @@ body{
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.726);
     margin-right: 310px;
-    height: 300px;
+    height: 300px; 
+    
     
 }
 .myicon{
     
     float: right;
 }
-.title1{
-   
-    position: absolute;
-    top:50%;
-    left:50%;
-    margin-top: -170px;
-    margin-left: -500px;
-}
+
 .toro{
     border-radius:10px;
     width: 300px;
@@ -147,4 +141,7 @@ body{
     border-radius:10px;
     border: 10px solid rgba(4, 243, 63, 0.699); /*�߿�*/
     background-color:  rgba(0, 0, 0, 0.658);
+}
+.test{
+    background-color: rgb(255, 0, 0);
 }
